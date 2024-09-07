@@ -1,0 +1,53 @@
+node.js is a runtime environment for js to run outside the browser
+react.js is a library
+next.js, express.js and angular.js are frameworks
+
+
+
+npm stands for node package manager
+It is a node library
+
+ejs stands for embedded js. It is a templating language
+It is used to embed js in html
+
+JWT stands for JSON work token
+
+
+express helps create smaller environments easily
+
+
+
+
+
+
+-----------------------------------
+
+Facebook developed ReactJS as a single page application
+
+VirtualDOM
+
+ReactNative --> mobile application development
+
+An application can be created with or without framework using react.
+Using a framework is recommended choice
+
+
+JSX --> allows us to write html elements with js and use them in DOM
+Eg: React.createElement('h1',null,Hello World)
+	ReactDOM.createRoot()
+
+react uses reactScripts to connect to the html instead of using script tag 
+
+
+Reconcilation --> used to change DOM with VirtualDOM
+
+https://github.com/acdlite/react-fiber-architecture
+
+in react, only parent can pass data to its child
+
+
+------------------------------------------
+
+TYPESCRIPT and MATERIAL-UI
+
+Typescript is maintained by Microsoft

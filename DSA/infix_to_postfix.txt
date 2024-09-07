@@ -1,0 +1,42 @@
+class ArrayStack:
+    def __init__(self):
+        self.items = []
+    def is_empty(self): 
+        return (len(self.items) == 0)
+    def push(self, item): 
+        self.items.append(item)
+    def pop(self): 
+        if not self.is_empty():
+            return self.items.pop()
+        else:
+            raise IndexError("pop from empty stack")
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+        else:
+            raise IndexError("peak from empty stack")
+    def size(self):
+        return len(self.items)
+
+
+in_exp = "2+3*(4-5)"
+post_exp = ""
+stack = ArrayStack()
+
+for i in range(len(in_exp)):
+    str = in_exp[i]
+    if(str.isdigit()): # case(str == int(str))
+    	post_exp += str
+    
+    if(str in  "+-*/(" ):   # also includes open paraenthesis				
+        stack.push(str)
+    if(str == ')'):
+        while(stack.peek() != '('):
+            post_exp += stack.pop()
+        paren = stack.pop()
+            
+while(stack.is_empty() == False): # while it still contains operators
+    post_exp += stack.pop()
+print(post_exp)
+		
+

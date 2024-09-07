@@ -1,0 +1,56 @@
+"var" allows reassigning and redeclaration
+"const" doesn't allow both
+"let" allows reassigned but not redeclared
+
+
+
+[outerdiv --> innerdiv --> button]
+default: button method will be propagated to the inner div then outer div
+"event.stopPropagation" doesn't allow propagation to other divs (parents)
+"event.stopImmediatePropagation" doesn't allow propagation of even the same div again 
+
+setTimeout(function() {}, 5) runs the given function after 5 seconds. It is an asynchronous function.s
+
+
+"await" will not cooperate with "promise" and always returns the ".catch" block within it instead of the ".then" block.
+
+
+"await" can only be used in an "async" function
+
+
+setTimeout(() => { ----- }, 3000); ---> will wait for 3 seconds before running
+
+
+"promise" runs with job-queue and other async tasks will use the callback-queue.
+
+--------------------------------------------------------------------
+Hoisting is a special feature of JS in which variables can be used before declaring them. It moves any variable declarations present to the top of the function (values is given as undefined as initialization is not moved) so global variables can't override local variables declared after the line.
+
+eg-1: 				eg-2:
+console.log(x)			var x;
+var x = 10;			console.log(x);
+console.log(x)			x = 10;
+				console.log(x)
+
+COMMON-OUTPUT: "undefined 10"
+Here above both examples work the same way inside a function irrespective of any global variable named 'x' which can only be called as "this.x".
+
+--------------------------------------------------------------------
+
+redeclaration a "let -> variable" inside an if-ladder doesn't throw an error as the "if" runs in a different block than the main code block
+
+
+--------------------------------------------------------------------
+
+Hashing is the process of converting data of any size into smaller sizes
+
+--------------------------------------------------------------------
+Greedy algorithm is used Huffman Coding to compress data and Dijkstra's algorithm finds shortest path through a graph;
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+
+
+

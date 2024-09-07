@@ -1,0 +1,9 @@
+body {
+  background-color: skyblue; 
+  text-align: center;
+  padding: 150px;
+}
+
+h3 {
+    display: inline;
+}

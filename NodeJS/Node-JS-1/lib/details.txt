@@ -1,0 +1,5 @@
+name | age | gender | city
+Rocky | 18 | Male | Hyderabad
+Manish | 19 | Male | Kolkata
+Radha | 17 | Female | Chennai
+Lasya | 19 | Female | Mumbai

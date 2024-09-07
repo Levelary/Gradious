@@ -1,0 +1,32 @@
+preprocessing:
+1. missing data /outliers
+2. one-hot / label
+3. standardization
+
+
+
+NLP processing:
+1. Lower casing
+2. Stop words
+3. Removing punctuation
+4. Removing digits
+5. Removing repeated characters
+6. Removing mail IDs
+7. Removing URL
+
+
+Tokenization (word to word separation)
+
+Stemming(prefixes and sufixes
+
+Lemmatization
+
+Vectorization
+
+Dependent(target) and Independent(data) variables
+
+Split train and test data
+
+Model building
+
+Model evaluation

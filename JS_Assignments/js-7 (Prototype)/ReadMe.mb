@@ -1,0 +1,18 @@
+Base Class: Card
+
+Properties:
+    cardNumber: The unique number identifying the card.
+    cardHolderName: The name of the person who owns the card.
+Methods:
+    makePayment(amount): Simulates making a payment of the specified amount.
+    displayDetails(): Displays the card details (card number and card holder name).
+
+Subclass: CreditCard
+
+    Inherits all properties and methods from the Card class.
+    Additional functionality specific to credit cards (amount) can be added here.
+
+Subclass: DebitCard
+
+    Inherits all properties and methods from the Card class.
+    Additional functionality specific to debit cards (amount) can be added here.

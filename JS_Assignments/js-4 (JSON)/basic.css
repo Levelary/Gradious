@@ -1,0 +1,25 @@
+.table {
+    display: table;
+    /* width: auto; */
+    min-width: 60%;
+    border-collapse: collapse; 
+}
+
+.row {
+    display: table-row;
+    border: 1px solid black;
+}
+
+.cell {
+    display: table-cell;
+    padding: 15px;
+    /* border: 1px solid black; */
+} 
+
+.header .cell {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+.row:nth-child(odd) {
+    background-color: #f9f9f9; /* or any other color you prefer */
+}

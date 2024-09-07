@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(108, 185, 15);
+    text-align: center;
+    padding: 80px;
+}
+
+#boldtext {
+    color: blue;
+}
+
+#itallictext {
+    color: yellow;
+}
+
+#underlinedtext {
+    color: greenyellow;
+}
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pop Up</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <button id="openpopup">Show PopUp</button>
+
+    <div id="popupbox">
+      <div class="textsection">
+        <h2 style="margin:0"> Confirmation </h2>
+        <img src="clear_icon.svg" id="clear_icon">
+        <p>Are you sure you want to delete this account? This action cannot be undone and you will be unable to recover any data.</p>
+      </div>  
+      <div class="buttonsection">
+        <button id="cancelbox">Cancel</button>
+        <button id="deletebox">Yes, delete it!</button>
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="popup.js"> </script>
+</body>
+
+</html>

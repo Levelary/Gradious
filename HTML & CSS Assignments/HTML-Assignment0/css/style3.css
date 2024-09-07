@@ -1,0 +1,12 @@
+body {
+    background-color: skyblue;
+    padding: 50px;
+}
+
+.centertext {
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+}

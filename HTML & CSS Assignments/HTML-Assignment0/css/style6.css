@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(51, 120, 147);
+    text-align: center;
+}
+
+#heading {
+    color: black;
+    padding: 50px;
+}
+
+h1 {
+    color: red;
+}
+h2 {
+    color: brown;
+}
+
+h3 {
+    color: palevioletred;
+}
+
+h4 {
+    color: green;
+}
+
+h5 {
+ color: yellow;
+} 
+
+h6 {
+    color: greenyellow;
+}
+
+
+

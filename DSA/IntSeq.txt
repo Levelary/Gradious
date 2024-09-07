@@ -1,0 +1,142 @@
+// data -->> elements
+// numItems -->> size
+// current_element_position -->> currentIndex
+
+import java.util.Arrays;
+
+public class IntSeq  		// IntSeq mybag = new IntSeq();
+{
+    private int[] elements;
+    private int size;
+    private int currentIndex;
+
+    public IntSeq()             // (1)
+    {
+        elements = new int[10]; // Default capacity
+        size = 0;
+        currentIndex = -1;
+    }
+
+    public IntSeq(int initialCapacity) // (2)
+    {
+	if(initialCapacity < 0)
+	    throw new IllegalArgumentException("initialCapacity is negative: " + initialCapacity);
+	elements = new int[initialCapacity];
+        size = 0;
+        currentIndex = -1;
+	
+    }
+
+    public void start() // (3)
+    {
+        if (size > 0) {
+            currentIndex = 0;
+        }
+    }
+
+    public boolean isCurrent() // (4)
+    {
+        return (currentIndex >= 0);
+    }
+
+    public void advance() // (5)
+    {
+        if (!isCurrent()) {
+            throw new IllegalStateException("No current element");
+        }
+        currentIndex++;
+    }
+
+    public void removeCurrent() // (6)
+    {
+        if (!isCurrent()) {
+            throw new IllegalStateException("No current element exists.");
+        }
+        for (int i = currentIndex; i < size - 1; i++) {
+            elements[i] = elements[i + 1];
+        }
+        size--;
+    }
+
+    public void addAfter(int item) // (7)
+    {
+        if (size == elements.length) {
+            ensureCapacity(size + 1);  // increase size
+        }
+        if (currentIndex == -1) {
+            currentIndex = 0;
+        }
+        for (int i = size; i > currentIndex + 1; i--) {
+            elements[i] = elements[i - 1];
+        }
+        elements[currentIndex + 1] = item;
+        size++;
+        currentIndex++;
+    }
+
+    public void addBefore(int element) // (8)
+    {
+        addAfter(element);
+        if (currentIndex > 0) {
+            currentIndex--;
+        }
+    }
+
+    public void addMany(int... addend) // (9)
+    {
+        if (size + addend.length > elements.length) {
+            ensureCapacity(size + addend.length);
+        }
+        for (int item : addend) {
+            elements[size++] = item;
+        }
+    }
+
+    public void ensureCapacity(int minimumCapacity) // (10)
+    {
+        if (minimumCapacity > elements.length) {
+            int newCapacity = Math.max(elements.length * 2, minimumCapacity);
+            elements = Arrays.copyOf(elements, newCapacity);
+        }
+    }
+
+    public int getCurrent() // (11)
+    {
+        if (!isCurrent()) {
+            throw new IllegalStateException("No current element");
+        }
+        return elements[currentIndex];
+    }
+
+    public void trimToSize() // (12)
+    {
+        elements = Arrays.copyOf(elements, size);
+    }
+
+  public static void main(String[] args) {
+    IntSeq mybag = new IntSeq(10);
+    
+    mybag.start();
+
+    mybag.addAfter(1);
+    
+    System.out.println(mybag.isCurrent());
+    
+    System.out.println(mybag.getCurrent());
+    
+    mybag.advance();
+    
+    mybag.addAfter(2);
+    
+    mybag.addBefore(0);
+    
+    mybag.addMany(3,4,5,6);
+    
+    mybag.removeCurrent();
+
+    mybag.ensureCapacity(15);
+    
+    mybag.trimToSize();
+    
+  }
+}

@@ -1,0 +1,121 @@
+* {
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 560px;
+}
+
+#box {
+    border: 2px solid #6f9be2;
+    width: 600px;
+    height: 500px;
+    padding:15px;
+}
+
+#name {
+    display: grid;
+    margin-left: -20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#first_name {
+    margin-left:10px;
+}
+
+input[type="text"], input[type="date"] {
+    width: 250px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    margin-top: -10px;
+}
+
+#permission {
+    display: flex;
+    margin-left: -20px;
+}
+
+#permission_label {
+    margin-left: -28px;
+}
+
+#first_name_error, #last_name_error, #email_error, #checkbox_error {
+    color: red;
+    display: none;
+    margin-top: -20px;
+}
+#checkbox_error {
+    margin-top: -70px;
+}
+
+#subscribe_btn {
+    background-color: #007bff;
+    color: white;
+    left: 40%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 130px;
+}
+/*            popup           */
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+} 
+
+#popupbox {
+    display: none;
+    position: fixed;
+    background-color: white;
+    border: 2px solid black;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#popupbox .textsection {
+    padding: 8px;
+}
+
+#popupbox .buttonsection {
+    background-color: rgb(169, 161, 161);
+    text-align: right;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+#ok_box {
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+#clear_icon {
+    text-align: right; 
+    width:8%;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+} 

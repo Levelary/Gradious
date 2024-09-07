@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/basic.css" />
+</head>
+
+<body>
+  <!-- popup -->
+
+  <div id="popupbox">
+    <div class="textsection">
+      <h2 style="margin:0"> POP UP </h2>
+      <img src="images/clear_icon.svg" id="clear_icon">
+      <p>Your details have been successfully stored in local storage.</p>
+    </div>  
+    <div class="buttonsection">
+      <button id="ok_box">Ok</button>
+    </div>
+  </div>
+  <div id="overlay"></div>
+
+  <!--form-->
+  <form id="box">
+    
+    <h2>Stay Updated!</h2>
+    <p>Subscribe to our newsletter to get the latest news.</p>
+
+    <label for="email_input">E-mail Address</label>
+    <input id="email_input" type="text"  placeholder="Enter your text">
+    <div id="email_error"><small>Enter a valid email id</small></div>
+
+    <div id="name">
+      <div id="first_name">
+        <label for="first_name_input">First Name</label>
+        <input id="first_name_input" type="text"  placeholder="Enter your text"><br>
+        <div id="first_name_error"><small>Enter a valid first name</small></div>
+      </div>
+      <div id="last_name" >    
+        <label for="last_name_input">Last Name</label>
+        <input id="last_name_input" type="text" placeholder="Enter your text"><br>
+        <div id="last_name_error"><small>Enter a valid last name</small></div>
+      </div>
+    </div>
+    <br>
+
+    <label for="loc_details">How did you come to know about our magazine: </label>
+    <select id="loc_details">
+          <option value="linkedin">LinkedIn</option>   
+          <option value="naukri">Naukri</option>
+          <option value="whatsapp">WhatsApp</option>
+    </select>
+    <br><br>
+
+    <label for="calendar">Subscribed On:</label>
+    <input type="date" id="calendar">
+
+    <div id="permission">
+      <div><input type="checkbox" id="permission_input"></div>
+      <div><label for="permission_input" id="permission_label">I agree to receive newsletters and promotional offers.</label></div><br>
+    </div>
+    <button id="subscribe_btn">Subscribe Now</button>
+    <div id="checkbox_error"><small>Select the checkbox to proceed.</small></div>
+  </form>
+
+  
+  
+    <script src="js/main.js"> </script>
+</body>
+
+</html>

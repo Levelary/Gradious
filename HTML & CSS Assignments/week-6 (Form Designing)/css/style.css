@@ -1,0 +1,66 @@
+* {
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 560px;
+}
+ 
+p {
+    margin-top: -20px;
+}
+
+#box {
+    border: 2px solid #6f9be2;
+    width: 600px;
+    height: auto;
+    padding:15px;
+}
+
+#name {
+    display: grid;
+    margin-left: -20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#first_name {
+    margin-left:10px;
+}
+
+input[type="text"], input[type="date"] {
+    width: 250px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    margin-top: -10px;
+}
+
+#permission {
+    display: flex;
+    margin-left: -20px;
+}
+
+#permission_label {
+    margin-left: -28px;
+}
+
+#subscribe_btn {
+    background-color: #007bff;
+    color: white;
+    left: 40%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 130px;
+}

@@ -1,0 +1,123 @@
+public class IntNode
+{
+	public int data;
+	public IntNode next;
+
+	puclic IntNode(int data, IntNode next)
+	{
+		this.data = data;
+		this.next = next;
+	}
+}
+
+public class LinkedSeq 
+{
+	private IntNode head;
+	private IntNode current;  // current element reference
+
+    	public LinkedSeq() 
+ 	{
+        	head = null;
+        	current = null;
+    	}
+
+
+    	public void start() 
+	{
+        	current = head;
+    	}
+
+
+    	public boolean isCurrent() 
+	{
+        	return current != null;
+    	}
+
+
+
+    	public void advance() 
+	{
+        	if(!isCurrent()) 
+		{
+            		throw new IllegalStateException("No current element");
+        	}
+        	current = current.next;
+    	}
+
+
+
+    	public void removeCurrent() 
+	{
+        	if(!isCurrent()) 
+		{
+            		throw new IllegalStateException("No current element");
+        	}
+        	if(current == head)
+            		head = head.next;
+        	else 
+		{
+            		IntNode previous = head;
+            		while (previous.next != current)
+                		previous = previous.next;	
+            		previous.next = current.next;
+        	}
+        	current = null;
+    	}
+
+
+
+    	public void addAfter(int element) 
+	{
+        	IntNode newNode = new IntNode(element, null);
+        	if (!isCurrent() || current == null) 
+		{
+            		if (head == null) 
+				head = newNode;
+
+			else 
+	 		{
+                		newNode.next = head;
+                		head = newNode;
+            		}
+            		current = head;
+        	} 
+		else 
+		{
+            		newNode.next = current.next;
+            		current.next = newNode;
+            		current = newNode;
+        	}
+	}
+
+
+    	public void addBefore(int element) 
+    	{
+        	IntNode newNode = new IntNode(element, null);
+        	if (!isCurrent() || current == null || current == head) 
+		{
+        	    	newNode.next = head;
+            		head = newNode;
+        	} 
+		else 
+		{
+            		IntNode previous = head;
+            		while (previous.next != current) 
+                		previous = previous.next;
+            
+           		previous.next = newNode;
+           		newNode.next = current;
+        	}
+        	current = newNode;
+    	}
+
+ 
+
+    	public int getCurrent() 
+	{
+        	if (!isCurrent())     //  case(current == null)
+		{
+        		throw new IllegalStateException("No current element");
+        	}
+        return current.data;
+    	}
+}

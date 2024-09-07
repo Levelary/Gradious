@@ -1,0 +1,89 @@
+mdn web docs, w3 schools for source
+
+Sir Time Bernes-Lee
+
+Declarative lang. (not computational)
+
+command lines were used before it for text based data accessing
+
+clients --> applications(apps)
+
+IDE
+
+Browser-sync tool --> used to run web server
+Codepen.io editor
+
+
+types of list:
+<ul> --> unordered list
+<ol> --> ordered list
+<dl> --> description list (default: unordered list)
+<dl><dt><dd> --> description list
+
+
+<!-- xxx --> comment (improves code readability)
+
+
+onblur --> defines action taken when cursor moves away
+onfocus --> defines action taken when cursor hovers over the object
+
+
+base64 decoder for image encoding and decoding for the server (base64 format has a higher bandwidth i.e., smaller size compared to string (link) format)
+./
+../
+relative path
+copy path
+absolute copy path
+
+
+void or empty element or unpaired tag don't have closing tag
+
+metadata using <meta> tag is used for search engine optimization
+
+id --> unique for each element (used for fetching an element)
+class --> an element can have multiple classes and viceverse(mainly used for styling)
+
+inline styling can not provide code reusability
+
+block level elements --> they start with a new line and occupy entire width of the line
+<h1-h6>,<p>,<div> (div creates new line before and after it)
+inline elements --> work in the available line
+<a>,<img>,<span>
+
+span tag provides a default width equal to the length of text
+RGB values --> hex values (range: 00 to FF)
+
+
+iframe --> allows us to pass one webpage in another webpage
+
+debugger --> it a tool used to debug code (find and fix errors)
+
+DNS is distributed database. It maps DN to IP address
+
+ipconfig is used to check ip address of a system
+
+
+crtl + shift + i ---> shortcut to debug console
+
+
+
+
+
+//////////////////[ CSS ]////////////////////
+
+
+
+
+
+div > p{}  ----> this styling can only be applied to p tag directly in div tag 
+
+div p{} ----> it can style all p tags within div
+
+
+border and outline
+
+
+local storage has a persistent memory. It saves the values even if the browser is closed while the session storage doesn't save the data.
+Both local and session storages have info. about the no. of times a tab is opened(refreshed).
+
+In a HTML page, the scripts are unresponsive until the whole script completes running

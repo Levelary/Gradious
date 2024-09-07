@@ -1,0 +1,46 @@
+class ArrayStack:
+	def _init_(self):
+	self.items = []
+	def is_empty(self): 
+		return len(self.items) == 0
+	def push(size, item): 
+		self.items.append(item)
+	def pop(self): 
+		if not self.is_empty():
+			return self.items.pop()
+		else:
+			raise IndexError("pop from empty stack")
+	def peak(self):
+		if not self.is_empty(): 
+			return self.items[-1]
+		else: 
+			raise IndexError("peak from empty stack")
+	def size(self): 
+		return len(self.items)
+
+
+expression = "234*+"
+
+stack = ArrayStack()
+
+for i in range(len(expression):
+	str = expression[i]
+	if(str == int(str)):
+		stack.push(str)
+		#continue
+	if(str in ['+','-','*','/']):
+		a = stack.pop()
+		b = stack.pop()
+		if(str == '+'):
+			result = a+b
+		if(str == '-'):
+			result = a-b
+		if(str == '*'):
+			result = a*b
+		if(str == '/'):
+			result = a/b   # or (a//b)
+		stack.push(result)
+if(stack.size() == 1): # contains result
+	print(stack.pop())
+		
+
